@@ -39,6 +39,7 @@ export class ConsumptionService {
       throw ErrorManager.createSignatureError(error.message);
     }
   }
+
   public async monthWithLessRefrigerantloss(): Promise<any> {
     try {
       const antivity: ActivitiesEntity[] =
@@ -57,11 +58,10 @@ export class ConsumptionService {
     }
   }
 
+
   constructor(
     @InjectRepository(ConsumptionEntity)
     private readonly consumptionRepository: Repository<ConsumptionEntity>,
-    @InjectRepository(ActivitiesEntity)
-    private readonly activitiesRepository: Repository<ActivitiesEntity>,
     private readonly activitiesService: ActivitiesService,
   ) {}
 
