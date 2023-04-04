@@ -1,0 +1,1 @@
+export const Frecuencies=['Diario','Semanal','Quinsenal','Mensual']
